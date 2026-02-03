@@ -1,71 +1,71 @@
 # Gymnasium RL Experiments
 
-三个经典强化学习实验，覆盖 Value-based、Policy-based 和 Actor-Critic 方法。
+Three classic reinforcement learning experiments covering Value-based, Policy-based, and Actor-Critic methods.
 
-## 🎮 实验列表
+## 🎮 Experiments
 
-| 实验 | 环境 | 算法 | 核心技术 |
-|------|------|------|----------|
-| 🚀 LunarLander | 月球着陆器 | DQN | 经验回放, Target Network |
-| 🎯 CartPole | 平衡杆 | REINFORCE | Policy Gradient |
-| 🦿 BipedalWalker | 双足行走 | PPO | Clipped Objective, GAE |
+| Experiment | Environment | Algorithm | Key Techniques |
+|------------|-------------|-----------|----------------|
+| 🚀 LunarLander | Moon landing | DQN | Experience Replay, Target Network |
+| 🎯 CartPole | Pole balancing | REINFORCE | Policy Gradient |
+| 🦿 BipedalWalker | Bipedal walking | PPO | Clipped Objective, GAE |
 
-## 📦 安装
+## 📦 Installation
 
 ```bash
 pip install gymnasium[box2d] torch stable-baselines3 imageio matplotlib
 ```
 
-## 🚀 快速开始
+## 🚀 Quick Start
 
 ```bash
-# 运行所有演示
+# Run all demos
 python run_demo.py --env all
 
-# 运行单个实验
-python run_demo.py --env lunar      # 月球着陆
-python run_demo.py --env cartpole   # 平衡杆
-python run_demo.py --env bipedal    # 双足行走
+# Run individual experiments
+python run_demo.py --env lunar      # Moon landing
+python run_demo.py --env cartpole   # Pole balancing
+python run_demo.py --env bipedal    # Bipedal walking
 ```
 
-## 📁 项目结构
+## 📁 Project Structure
 
 ```
 gymnasium-experiments/
-├── run_demo.py                    # 一键演示脚本
+├── run_demo.py                    # One-click demo script
 ├── lunar-lander-dqn/
-│   ├── dqn.py                     # DQN 实现
-│   ├── train.py                   # 训练脚本
-│   ├── model_best.pth             # 训练好的模型
-│   ├── training_curve.png         # 训练曲线
-│   └── lunar_lander_trained.gif   # 演示 GIF
+│   ├── dqn.py                     # DQN implementation
+│   ├── train.py                   # Training script
+│   ├── model_best.pth             # Trained model
+│   ├── training_curve.png         # Training curve
+│   └── lunar_lander_trained.gif   # Demo GIF
 ├── cartpole-reinforce/
-│   ├── reinforce.py               # REINFORCE 实现
-│   ├── policy_model.pth           # 训练好的模型
-│   ├── training_curve.png         # LR 对比曲线
-│   └── cartpole_reinforce.gif     # 演示 GIF
+│   ├── reinforce.py               # REINFORCE implementation
+│   ├── policy_model.pth           # Trained model
+│   ├── training_curve.png         # LR comparison curve
+│   └── cartpole_reinforce.gif     # Demo GIF
 └── bipedal-ppo/
-    ├── train.py                   # PPO 训练脚本
-    ├── bipedal_ppo_model.zip      # SB3 模型
-    └── bipedal_walker.gif         # 演示 GIF
+    ├── train.py                   # PPO training script
+    ├── bipedal_ppo_model.zip      # SB3 model
+    └── bipedal_walker.gif         # Demo GIF
 ```
 
-## 🎬 演示效果
+## 🎬 Demo Results
 
 ### LunarLander (DQN)
-控制着陆器在月球表面安全降落。目标 reward > 200。
+Control a lander to safely touch down on the moon surface. Target reward > 200.
 
 ### CartPole (REINFORCE)
-通过左右移动小车保持杆子平衡 500 步。
+Balance a pole on a cart for 500 steps by moving left/right.
 
 ### BipedalWalker (PPO)
-控制双足机器人行走。目标 reward > 300。
+Control a bipedal robot to walk forward. Target reward > 300.
 
-## 📊 训练结果
+## 📊 Training Results
 
-- **LunarLander**: ~200 episodes 达到 reward > 200
-- **CartPole**: ~700 episodes 达到满分 500
-- **BipedalWalker**: ~800K steps 达到 reward > 250
+- **LunarLander**: ~200 episodes to reach reward > 200
+- **CartPole**: ~700 episodes to reach max score 500
+- **BipedalWalker**: ~800K steps to reach reward > 250
 
 ## License
 
